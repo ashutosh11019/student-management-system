@@ -1,0 +1,35 @@
+  {% extends 'login.html' %}
+
+  {% block contenttb %}
+    
+    
+    
+
+         <table class="table table-dark table-striped " style="margin-top:10px;">
+  <thead>
+    <tr>
+      <h2 class="text-center">ARE YU SURE WANT TO DELETE </h2>
+    </tr>
+  </thead>
+
+  
+  <tbody>
+    <tr>
+      <td>{{item.name}}</td>
+      <td>{{item.Roll}}</td>
+      <td>{{item.Std}}</td>
+      <td><a type="button" href="{% url 'data' %}" class="btn btn-warning">Cancel</a></td>
+      <td><form action="" method='POST'>
+            {% csrf_token %}
+    
+        <input type="submit" class="btn btn-warning" name="Confirm" >
+        </form></td>
+    </tr>
+    
+  </tbody>
+  
+
+
+</table>
+    {% endblock contenttb %}
+   
